@@ -1,7 +1,11 @@
+import React from "react";
+import Header from "./component/Header";
+import "./App.css";
+
 function App() {
   return (
-    <div className="flex justify-center gap-8 p-4">
-      <h2>Hulu App</h2>
+    <div className="bg-body text-gray-100 h-screen ">
+      <Header />
     </div>
   );
 }
