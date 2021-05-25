@@ -12,7 +12,7 @@ import logo from "../../images/logo.png";
 
 const Header = () => {
   return (
-    <div className="flex flex-col items-center justify-between sm:flex-row">
+    <div className="flex flex-col mb-5 items-center justify-between sm:flex-row h-auto">
       <div className="flex pt-3 m-5">
         <HeaderItems title="HOME" Icon={HomeIcon} />
         <HeaderItems title="TRENDING" Icon={LightningBoltIcon} />
