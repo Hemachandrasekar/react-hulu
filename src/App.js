@@ -9,7 +9,14 @@ const App = () => {
   // eslint-disable-next-line
   let location = useLocation();
   const [list, setList] = useState([]);
+
   const fetchMovies = (location) => {
+    console.log("location value", location);
+
+    if (location === null) {
+    } else {
+      location = "/trending";
+    }
     fetch(
       `https://api.themoviedb.org/3${location}/all/week?api_key=f64c70cd7a57c5893c2c78f4f6bc9165&language=en-us`
     )
@@ -18,18 +25,13 @@ const App = () => {
         setList(data.results);
       });
   };
+
+  useEffect(() => {
+    fetchMovies();
+  }, []);
   useEffect(() => {
     fetchMovies(location.pathname);
   }, [location]);
-
-  useEffect(() => {
-    fetchMovies("/trending");
-  }, []);
-  useEffect(() => {
-    // eslint-disable-next-line
-    console.log("Movie list", list);
-    // eslint-disable-next-line
-  }, [list]);
 
   return (
     <div className="bg-body text-gray-100 h-full ">
