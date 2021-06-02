@@ -8,6 +8,12 @@ const Navbar = () => {
     { menu: "Action", menulink: "/action" },
     { menu: "Comedy", menulink: "/comedy" },
     { menu: "Horror", menulink: "/horror" },
+    { menu: "Romance", menulink: "/romance" },
+    { menu: "Mystery", menulink: "/mystery" },
+    { menu: "Sci-Fi", menulink: "/sci_fi" },
+    { menu: "Western", menulink: "/western" },
+    { menu: "Animation", menulink: "/animation" },
+    { menu: "Tv Movie", menulink: "/tv_movie" },
 
     // "Romance",
     // "Mystery",
